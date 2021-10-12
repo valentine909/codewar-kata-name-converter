@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kyu name converter</title>
+</head>
+<body style="display:flex;justify-content: center">
+<div class="wrapper">
+  <p style="margin-top: 200px;">Enter kata's name as on Codewar:</p>
+  <label>
+    <input type="text" style="width: 400px; height: 22px;" class="myInput">
+  </label>
+  <p style="margin-top: 40px;">Get the converted name:</p>
+  <div class="div" style="width: 400px; border: 1px #000 solid; height: 22px;"></div>
+</div>
+<script>
+  const input = document.querySelector(".myInput");
+  const output = document.querySelector(".div");
+  input.addEventListener("input", convert)
+
+  function convert() {
+      output.innerHTML = input.value.toLowerCase().replaceAll(" ", "-");
+  }
+</script>
+</body>
+</html>
